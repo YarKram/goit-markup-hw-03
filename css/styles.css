@@ -111,7 +111,8 @@ body {
   letter-spacing: 0.06em;
 }
 
-.button-background:hover {
+.button-background:hover,
+.button-background:focus {
   color: var(--accent-color-two);
   background-color: var(--button-background-color-hover);
 }
@@ -223,4 +224,8 @@ a:link:focus {
   color: var(--studio-style-color);
   font: var(--main-font);
   font-style: var(--font-style);
+}
+
+.card-image.no-gap {
+  display: block;
 }
