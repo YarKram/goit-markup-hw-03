@@ -1,4 +1,15 @@
+/* html box */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 /* header */
+
 :root {
   --main-text-color: #212121;
   --additional-text-color: #757575;
@@ -17,9 +28,99 @@
   --button-background-color-hover: #188ce8;
 }
 
+/* header container */
+
+.container {
+  margin-top: 0;
+  margin-bottom: 0;
+  outline: 1px solid tomato;
+
+  width: 1200px;
+}
+
+.main-nav {
+  display: flex;
+}
+.web-studio {
+  margin-left: 0;
+  margin-right: 93px;
+  /* padding-top: 24px;
+  padding-bottom: 25px; */
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+  padding-left: 0;
+}
+
+.site-nav .link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.site-nav .item + .item {
+  margin-left: 50px;
+}
+
+.contact-nav {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  padding-left: 0;
+}
+
+.contact-nav .item:nth-child(2) {
+  margin-right: 0;
+  margin-left: 50px;
+}
+
+.contact-nav .item {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.mail,
+.phone {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.footer-style {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-bottom: 0;
+}
+
+.web,
+.studio-bl {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.site-nav {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.contact-nav {
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
 /* header */
 .header {
   background-color: var(--accent-color-two);
+}
+
+/* main container */
+
+.section-one {
+  text-align: center;
 }
 
 body {
@@ -30,12 +131,17 @@ body {
 }
 .list {
   list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .site-nav .link,
 .web,
 .studio,
 .web-studio {
+  display: inline-block;
+  margin-bottom: 0;
+
   list-style: none;
   color: var(--main-text-color);
   text-decoration: none;
@@ -99,6 +205,33 @@ body {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  display: block;
+  width: 696px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-top: 200px;
+
+  text-align: center;
+}
+
+/* advantages container */
+
+.advantages {
+  width: 1170px;
+}
+
+.advantages-list {
+  display: flex;
+  padding-left: 0;
+  margin-top: 94px;
+}
+
+.advantages-list .item + .item {
+  margin-left: 30px;
 }
 
 .button-background {
@@ -109,6 +242,13 @@ body {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+
+  border-radius: 4px;
+  padding: 10px 32px;
+  margin-bottom: 200px;
+
+  display: inline-block;
+  text-align: center;
 }
 
 .button-background:hover,
@@ -147,6 +287,9 @@ button {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .paragraph {
@@ -155,18 +298,34 @@ button {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
+  margin-bottom: 0;
+  margin-top: 0;
 }
 .section-title {
   font-size: 36px;
   line-height: 1.17;
   letter-spacing: 0.03em;
+
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  text-align: center;
 }
+
+.list img {
+  margin-bottom: 30px;
+}
+
 .employee-name {
   color: var(--main-text-color);
   font-weight: var(--font-weight-employee-name);
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 .paragraph-employee {
   color: var(--additional-text-color);
@@ -174,6 +333,9 @@ button {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+
+  margin-bottom: 0;
+  margin-top: 0;
 }
 .paragraph-name {
   color: var(--main-text-color);
@@ -198,6 +360,12 @@ button {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
+  margin-bottom: 9px;
+}
+
+.list .address-city:last-child {
+  margin-bottom: 0;
 }
 
 .footer {
@@ -224,8 +392,16 @@ a:link:focus {
   color: var(--studio-style-color);
   font: var(--main-font);
   font-style: var(--font-style);
+
+  display: inline-block;
+
+  /* margin-bottom: 9px; */
 }
 
-.card-image.no-gap {
+.tel {
+  margin-bottom: 0px;
+}
+
+.card-image {
   display: block;
 }
