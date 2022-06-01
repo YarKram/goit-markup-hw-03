@@ -15,13 +15,13 @@ html {
   --additional-text-color: #757575;
   --accent-color: #2196f3;
   --accent-color-two: #ffffff;
-  --main-font: "Roboto", sans-serif;
+  --main-font: 'Roboto', sans-serif;
   --main-font-weight: 900;
   --additional-font-weight: 400;
   --font-weight-employee-name: 500;
   --font-weight-advantages: 700;
-  --additional-font: "Raleway", sans-serif;
-  --font-style: "Normal";
+  --additional-font: 'Raleway', sans-serif;
+  --font-style: 'Normal';
   --accent-backgroung: #2f303a;
   --accent-button-backgroung: #f5f4fa;
   --studio-style-color: rgba(255, 255, 255, 0.6);
@@ -54,7 +54,9 @@ img {
 
 .web-studio {
   margin-left: 0;
-  margin-right: 93px;
+  margin-right: 0;
+
+  padding-left: 15px;
 }
 
 .nav-header {
@@ -66,6 +68,7 @@ img {
 .site-nav {
   display: flex;
   padding-left: 0;
+  margin-left: 93px;
 }
 
 .site-nav .link {
@@ -87,7 +90,7 @@ img {
 
 .contact-nav .item:nth-child(2) {
   margin-right: 0;
-  margin-left: 50px;
+  margin-left: 93px;
 }
 
 .contact-nav .item {
@@ -227,16 +230,21 @@ body {
 
 .advantages-list {
   display: flex;
+  flex-wrap: wrap;
   padding-left: 15px;
   padding-right: 15px;
+  margin-left: calc(-1 * var(--cards-gap));
+  margin-top: calc(-1 * var(--cards-gap));
 }
 
 .advantages-list .item {
-  margin-right: 30px;
-  margin-left: 0;
-  margin-top: 0;
+  margin-right: 0;
+  margin-left: var(--cards-gap);
+  margin-top: var(--cards-gap);
   margin-bottom: 0;
   padding: 0;
+
+  flex-basis: calc(100% / 4 - var(--cards-gap));
 }
 
 .advantages-list .item:last-child {
@@ -281,7 +289,9 @@ body {
 /* our team */
 
 .card-bottom {
-  margin: 30px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  justify-content: center;
 }
 
 .employee-name,
@@ -327,16 +337,14 @@ body {
 .footer {
   background-color: var(--accent-backgroung);
   font-style: var(--font-style);
-}
-
-.footer-style {
   padding-top: 60px;
   padding-bottom: 60px;
   padding-left: 15px;
-  margin-bottom: 0;
+  margin: 0;
+  /* min-width: 1200px; */
 }
 
-.footer-style a.web-studio {
+.footer a.web-studio {
   margin-right: 0;
   margin-bottom: 20px;
   display: inline-block;
@@ -348,7 +356,7 @@ body {
 
 /* portfolio */
 
-.port {
+.portfolio-border {
   border-bottom: 1px solid #ececec;
 }
 
@@ -369,7 +377,7 @@ body {
 .filter .item + .item {
   margin-left: 8px;
 }
-
+/* 
 .postfilter {
   justify-content: center;
   align-content: center;
@@ -379,11 +387,12 @@ body {
 
   padding-left: 15px;
   padding-right: 15px;
-}
+} */
 
 .filter-cards {
   margin: 0;
-  padding: 0;
+  padding-left: 15px;
+  padding-right: 15px;
 
   margin-top: calc(-1 * var(--cards-gap));
   margin-left: calc(-1 * var(--cards-gap));
@@ -429,8 +438,6 @@ body {
   line-height: 1.63;
   letter-spacing: 0.03em;
 
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   border: transparent;
 }
@@ -443,6 +450,9 @@ body {
   font-size: 16px;
   line-height: 1.63;
   letter-spacing: 0.03em;
+
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 button {
@@ -526,6 +536,8 @@ button {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
+  padding-left: 15px;
 }
 
 a:link {
