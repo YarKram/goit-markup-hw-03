@@ -117,6 +117,7 @@ img {
 /* header */
 .header {
   background-color: var(--accent-color-two);
+  border-bottom: 1px solid #ececec;
 }
 
 /* main container */
@@ -355,10 +356,6 @@ body {
 }
 
 /* portfolio */
-
-.portfolio-border {
-  border-bottom: 1px solid #ececec;
-}
 
 .filter {
   margin-bottom: 50px;
